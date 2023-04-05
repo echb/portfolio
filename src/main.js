@@ -1,21 +1,18 @@
 import './style.css';
-import intro from './components/introduction.js'
+import intro from './sections/sectionIntroduction.js'
 import toggle from './components/toggle'
 import { $ } from './utils';
-import { skillSetComponent } from './components/skills';
+import { skillSetComponent } from './sections/sectionSkills';
 import { jobs, projects, sideProjects, skills } from './store';
-import { experienceSectionComponent } from './components/experience';
-import { projectsSectionComponent } from './components/sectionProjects';
-import { sideProjectsSectionComponent } from './components/sectionSideProjects';
+import { experienceSectionComponent } from './sections/sectionExperience';
+import { projectsSectionComponent } from './sections/sectionProjects';
+import { sideProjectsSectionComponent } from './sections/sectionSideProjects';
 
 let ss = 0
 
 const header = $({ querySelector: 'header' })
 const main = $({ querySelector: 'main' })
 const ui = (e) => {
-	// header.appendChild(jjj())
-	// header.appendChild(jjj())
-	// header.appendChild(jjj())
 	header.appendChild(toggle())
 	header.appendChild(intro)
 	main.appendChild(skillSetComponent({ skillTitle: 'skills'.toUpperCase(), skills: skills }))
@@ -23,10 +20,4 @@ const ui = (e) => {
 	main.appendChild(projectsSectionComponent({ sectionTitle: 'Projects'.toUpperCase(), items: projects }))
 	main.appendChild(sideProjectsSectionComponent({ sectionTitle: 'Side Projects'.toUpperCase(), items: sideProjects }))
 }
-
 ui()
-// export const updateUi = () => {
-// 	header.innerHTML = ''
-// 	ss++
-// 	ui()
-// }
