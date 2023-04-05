@@ -1,7 +1,7 @@
 import { $el } from "../utils"
-import { sectionTitleComponent } from "./sectionTitle";
-import { textLight } from "./text";
-import { title } from "./title";
+import { sectionTitleComponent } from "../components/sectionTitle";
+import { textLight } from "../components/text";
+import { title } from "../components/title";
 
 
 const style = /*html*/`
