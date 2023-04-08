@@ -1,12 +1,13 @@
 import { $el } from "../utils"
+import './footerSection.css'
 
 const html = /*html*/`
-  <div :class="$style.socialBox">
+  <div class="socialBox">
     <ul>
       <li>
         <a
           href="mailto:ech.emmanuel.ch@gmail.com"
-          :class="$style.link"
+          class="link"
           target="blank"
         >
           <span> Email </span>
@@ -35,7 +36,7 @@ const html = /*html*/`
       <li>
         <a
           href="https://www.linkedin.com/in/emmanuel-correa-herrera-54b3161b9"
-          :class="$style.link"
+          class="link"
           target="blank"
         >
           <span> Linkedin </span>
@@ -80,7 +81,7 @@ const html = /*html*/`
       <li>
         <a
           href="https://github.com/echb"
-          :class="$style.link"
+          class="link"
           target="blank"
         >
           <span> Github </span>
@@ -118,12 +119,12 @@ const html = /*html*/`
       <li>
         <a
           href="https://www.codewars.com/users/echb"
-          :class="$style.link"
+          class="link"
           target="blank"
         >
           <span> Codewars </span>
           <svg
-            :class="$style.codeWars"
+            class="codeWars"
             width="24px"
             height="24px"
             viewBox="0 0 24 24"

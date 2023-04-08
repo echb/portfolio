@@ -7,7 +7,7 @@ import { jobs, projects, sideProjects, skills } from './store';
 import { experienceSectionComponent } from './sections/sectionExperience';
 import { projectsSectionComponent } from './sections/sectionProjects';
 import { sideProjectsSectionComponent } from './sections/sectionSideProjects';
-import { footerComponent } from './sections/s';
+import { footerComponent } from './sections/footerSection';
 
 let ss = 0
 
