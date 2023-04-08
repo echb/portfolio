@@ -1,151 +1,4 @@
-(function(){const c=document.createElement("link").relList;if(c&&c.supports&&c.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const p of o.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&n(p)}).observe(document,{childList:!0,subtree:!0});function l(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerPolicy&&(o.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?o.credentials="include":e.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function n(e){if(e.ep)return;e.ep=!0;const o=l(e);fetch(e.href,o)}})();const m=({querySelector:t=""})=>document.querySelector(t),g=document.createElement("div"),s=({template:t=""}={})=>{const c=g.cloneNode(!0);return c.innerHTML=`${t}`,c};const k=`
-	<div class="header">
-		<h1>Hello</h1>
-		<h2>
-			I'm <span>Emmanuel Correa</span>, a front-end focused developer with
-			design skills capable of bringing a ui design to life.
-		</h2>
-		<p>
-			Get in touch <span class="hand">👉</span>
-			<a class="email" href="mailto:ech.emmanuel.ch@gmail.com"
-				>Email</a
-			>
-		</p>
-	</div>
-`,w=s({template:k});const f=`
-  	<div class="darkButton">
-		<img
-			src="https://iconoir.com/source/icons/half-moon.svg"
-			alt=""
-			class="imgDark"
-		/>
-		<div
-			class="pillDark pillDarkActive"
-		>
-			<div
-				class="round activeDarkPill"
-			></div>
-		</div>
-		<img
-			src="https://iconoir.com/source/icons/sun-light.svg"
-			alt=""
-			class="imgDark"
-		/>
-	</div>
-`,d=m({querySelector:"body"}),b=t=>{const c=s({template:f});return c.addEventListener("click",()=>{d.dataset.theme==="dark"?(c.children[0].classList.add("active"),d.dataset.theme=""):(c.children[0].classList.remove("active"),d.dataset.theme="dark")}),c};const a=(t="")=>{const c=`
-  <div>
-    <h3 class="section_title">${t}</h3>
-  </div>
-  `;return s({template:c}).innerHTML},h=(t="",c=!1)=>{const l=`
-    <p class="text_light ${c?"capitalize":""}">${t}</p>
-  `;return s({template:l}).innerHTML},v=(t="",c=!1)=>{const l=`
-    <h3 class="title ${c?"m0":""}">${t}</h3>
-      `;return s({template:l}).innerHTML};const C=({skillTitle:t="",skills:c=[]}={})=>{const l=`
-    <section class="skills">
-      ${a(t)}
-      <div class="skillsBox">
-        ${c.map(e=>`
-          <div>
-            ${v(e.name)}
-            <ul>
-              ${e.skillName.map(o=>`${h(o,!0)}`).join("")}
-            </ul>
-          </div>
-        `).join("")}
-      </div>
-    </section>
-  `;return s({template:l})},i="https://raw.githubusercontent.com/echb/aaa/master/docs/assets/",$=[{name:"Languajes",skillName:["html","css","javascript(ES6+)","Node","Dart"]},{name:"Frameworks",skillName:["vuejs","strapi","Flutter"]},{name:"Libraries",skillName:["chartjs","Puppeteer","gsap","bootstrap"]},{name:"Tools",skillName:["bash","firebase","npm","git & github","debugging","devtools","Gulp & Grunt","webpack"]},{name:"Others",skillName:["coventional commits","responsive design","bem","web components","atomic design"]}],j=[{name:"Kiritek",url:"https://kiritek.com/",date:"Jan 2023 - Present",role:"Front End Developer"},{name:"Kiritek",url:"https://kiritek.com/",date:"jun 2022 - Present",role:"Mobile Developer"},{name:"G4A",url:"https://www.g4a.mx/",date:"Feb 2021 - Jun 2022",role:"Front End Developer"}],y=[{name:"Skolable",description:"Mobile app that provides security and comfort, made with flutter.",img:`${i}skolable.png`,url:"https://skolable.com/"},{name:"Myfrac",description:"Mobile app that provides security and comfort, made with flutter.",img:`${i}centro_urbano.png`,url:"https://myfrac.com/"},{name:"Myfrac vigilantes",description:"Mobile app alogside with myfrac provide security and allow vigilants give access to non residents, made with flutter.",img:`${i}centro_urbano.png`,url:"https://myfrac.com/"},{name:"Centro Urbano",description:"Full redesign of website, improving UI and UX, performing SEO.",img:`${i}centro_urbano.png`,url:"https://centrourbano.com/"},{name:"quadratin",description:"Creation of components",img:`${i}quadratin.png`,url:"https://www.quadratin.com.mx/"},{name:"Linde",description:"Creation of components",img:`${i}linde.png`,url:"https://www.linde.mx/"}],L=[{name:"FB automate",description:"App to consume services from node-scraper",url:"https://github.com/echb/scraping-server-node",techs:["git","ionic","async / await","fetch","vue","Bootstrap","js","html","css","webpack"]},{name:"Scraping Server Node",description:"Full backend api service app with roles and permissions, scraping and robot post include to automate facebook marketplace posts",url:"https://github.com/echb/scraping-server-node",techs:["node","async / await","Axios","fastify","robot-post","Linode"]},{name:"Robot Post",description:"Npm package to automate facebook marketplace posts",url:"https://github.com/echb/robot-post",techs:["js","async / await","Puppeter","jimp"]},{name:"lego-web-components",description:"Crud app made making use of strapi as backend and vue as frontend",url:"https://www.npmjs.com/package/lego-web-components",techs:["vue","strapi","async / await","Axios","js","css","html"]},{name:"Music Player",description:"app created on my free time to use mostly js, and web audio native api.",img:`${i}music_make.gif`,url:"https://echb.github.io/music_player/",techs:["js","html","css","local api","fech","vs code"]}];const M=({sectionTitle:t="",items:c=[]}={})=>{const l=`
-    	<section class="experience">
-          ${a(t)}
-          <div class="jobs">
-            ${c.map(e=>`
-                <div class="company">
-                  <div>
-                    <a href="${e.url}" target="blank">
-                      ${v(e.name,!0)}
-                    </a>
-                    <span>${e.date}</span>
-                  </div>
-                  ${h(e.role,!0)}
-                </div>
-              `).join("")}
-            <a class="resume" href="CV_English.docx.pdf" target="blank">View My Resume👉
-            </a>
-          </div>
-      </section>
-  `;return s({template:l})};const x=({sectionTitle:t="",items:c=[]}={})=>{const l=`
-    	<section class="projects">
-        ${a(t)}
-        <div>
-          ${c.map(e=>`
-          <div class="job">
-              <div>
-                <a href="${e.url}" target="blank">
-                  <img class="image" src="${e.img}" alt="${e.name}" />
-                </a>
-              </div>
-              <figcaption class="projec_description">
-                <a href="${e.url}" target="blank">
-                  <span> ${e.name} </span>
-                </a>
-                ${h(e.description)}
-              </figcaption>
-            </div>
-            `).join("")}
-        </div>
-    </section>
-  `;return s({template:l})};const H=(t="")=>{const c=`
-    <div class="techs">
-      <p>
-        ${t}
-      </p>
-    </div>
-  `;return s({template:c}).innerHTML};const S=`
-    <svg
-    width="24"
-    height="24"
-    stroke-width="1.5"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    >
-    <path
-      d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    </svg>
-`,_=s({template:S}).innerHTML,P=({sectionTitle:t="",items:c=[]}={})=>{const l=`
-    <section class="side_projects">
-        ${a(t)}
-        <div class="side_projects_box">
-          ${c.map(e=>`
-            <div class="side_projects_job">
-              <figcaption class="side_projects_description">
-                <a class="arrow_link" href="${e.url}" target="blank">
-                  <span> ${e.name} </span>
-                  ${_}
-                </a>
-                <p>
-                  ${e.description}
-                </p>
-                <div class="flex wrap">
-                  ${e.techs.map(o=>H(o)).join("")}
-                </div>
-              </figcaption>
-              <div class="job_img">
-                <a href="${e.url}" target="blank">
-                  <img class="image" src="${e.img}" alt="${e.name}" />
-                </a>
-              </div>
-            </div>
-          
-          `).join("")}
-
-        </div>
-      </section>
-  `;return s({template:l})};const V=`
+(function(){const c=document.createElement("link").relList;if(c&&c.supports&&c.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const d of o.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function l(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerPolicy&&(o.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?o.credentials="include":e.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function n(e){if(e.ep)return;e.ep=!0;const o=l(e);fetch(e.href,o)}})();const a=({querySelector:t=""})=>document.querySelector(t),k=document.createElement("div"),s=({template:t=""}={})=>{const c=k.cloneNode(!0);return c.innerHTML=`${t}`,c};const w=`
   <div class="socialBox">
     <ul>
       <li>
@@ -284,4 +137,151 @@
       </li>
     </ul>
   </div>
-`,D=s({template:V}),u=m({querySelector:"header"}),r=m({querySelector:"main"}),E=t=>{u.appendChild(b()),u.appendChild(w),r.appendChild(C({skillTitle:"skills".toUpperCase(),skills:$})),r.appendChild(M({sectionTitle:"Experience".toUpperCase(),items:j})),r.appendChild(x({sectionTitle:"Projects".toUpperCase(),items:y})),r.appendChild(P({sectionTitle:"Side Projects".toUpperCase(),items:L})),r.appendChild(D)};E();
+`,v=s({template:w}),f=`
+	<div class="header">
+		<h1>Hello</h1>
+		<h2>
+			I'm <span>Emmanuel Correa</span>, a front-end focused developer with
+			design skills capable of bringing a ui design to life.
+		</h2>
+		<div class="contact">
+			<div>
+				Get in touch <span class="hand">👉</span>
+				<a class="email" href="mailto:ech.emmanuel.ch@gmail.com">Email</a>
+			</div>
+			${v.innerHTML}
+		</div>
+	</div>
+`,b=s({template:f});const C=`
+  	<div class="darkButton">
+		<img
+			src="https://iconoir.com/source/icons/half-moon.svg"
+			alt=""
+			class="imgDark"
+		/>
+		<div
+			class="pillDark pillDarkActive"
+		>
+			<div
+				class="round activeDarkPill"
+			></div>
+		</div>
+		<img
+			src="https://iconoir.com/source/icons/sun-light.svg"
+			alt=""
+			class="imgDark"
+		/>
+	</div>
+`,m=a({querySelector:"body"}),$=t=>{const c=s({template:C});return c.addEventListener("click",()=>{m.dataset.theme==="dark"?(c.children[0].classList.add("active"),m.dataset.theme=""):(c.children[0].classList.remove("active"),m.dataset.theme="dark")}),c};const p=(t="")=>{const c=`
+  <div>
+    <h3 class="section_title">${t}</h3>
+  </div>
+  `;return s({template:c}).innerHTML},h=(t="",c=!1)=>{const l=`
+    <p class="text_light ${c?"capitalize":""}">${t}</p>
+  `;return s({template:l}).innerHTML},g=(t="",c=!1)=>{const l=`
+    <h3 class="title ${c?"m0":""}">${t}</h3>
+      `;return s({template:l}).innerHTML};const j=({skillTitle:t="",skills:c=[]}={})=>{const l=`
+    <section class="skills">
+      ${p(t)}
+      <div class="skillsBox">
+        ${c.map(e=>`
+          <div>
+            ${g(e.name)}
+            <ul>
+              ${e.skillName.map(o=>`${h(o,!0)}`).join("")}
+            </ul>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+  `;return s({template:l})},i="https://raw.githubusercontent.com/echb/portfolio/master/docs/assets/",y=[{name:"Languajes",skillName:["html","css","javascript(ES6+)","Node","Dart"]},{name:"Frameworks",skillName:["vuejs","strapi","Flutter"]},{name:"Libraries",skillName:["chartjs","Puppeteer","gsap","bootstrap"]},{name:"Tools",skillName:["bash","firebase","npm","git & github","debugging","devtools","Gulp & Grunt","webpack"]},{name:"Others",skillName:["coventional commits","responsive design","bem","web components","atomic design"]}],L=[{name:"Kiritek",url:"https://kiritek.com/",date:"Jan 2023 - Present",role:"Front End Developer"},{name:"Kiritek",url:"https://kiritek.com/",date:"jun 2022 - Present",role:"Mobile Developer"},{name:"G4A",url:"https://www.g4a.mx/",date:"Feb 2021 - Jun 2022",role:"Front End Developer"}],M=[{name:"Skolable",description:"Mobile app that provides security and comfort, made with flutter.",img:`${i}skolable.png`,url:"https://skolable.com/"},{name:"Myfrac",description:"Mobile app that provides security and comfort, made with flutter.",img:`${i}centro_urbano.png`,url:"https://myfrac.com/"},{name:"Myfrac vigilantes",description:"Mobile app alogside with myfrac provide security and allow vigilants give access to non residents, made with flutter.",img:`${i}centro_urbano.png`,url:"https://myfrac.com/"},{name:"Centro Urbano",description:"Full redesign of website, improving UI and UX, performing SEO.",img:`${i}centro_urbano.png`,url:"https://centrourbano.com/"},{name:"quadratin",description:"Creation of components",img:`${i}quadratin.png`,url:"https://www.quadratin.com.mx/"},{name:"Linde",description:"Creation of components",img:`${i}linde.png`,url:"https://www.linde.mx/"}],x=[{name:"FB automate",description:"App to consume services from node-scraper",url:"https://github.com/echb/scraping-server-node",techs:["git","ionic","async / await","fetch","vue","Bootstrap","js","html","css","webpack"]},{name:"Scraping Server Node",description:"Full backend api service app with roles and permissions, scraping and robot post include to automate facebook marketplace posts",url:"https://github.com/echb/scraping-server-node",techs:["node","async / await","Axios","fastify","robot-post","Linode"]},{name:"Robot Post",description:"Npm package to automate facebook marketplace posts",url:"https://github.com/echb/robot-post",techs:["js","async / await","Puppeter","jimp"]},{name:"lego-web-components",description:"Crud app made making use of strapi as backend and vue as frontend",url:"https://www.npmjs.com/package/lego-web-components",techs:["vue","strapi","async / await","Axios","js","css","html"]},{name:"Music Player",description:"app created on my free time to use mostly js, and web audio native api.",img:`${i}music_make.gif`,url:"https://echb.github.io/music_player/",techs:["js","html","css","local api","fech","vs code"]}];const H=({sectionTitle:t="",items:c=[]}={})=>{const l=`
+    	<section class="experience">
+          ${p(t)}
+          <div class="jobs">
+            ${c.map(e=>`
+                <div class="company">
+                  <div>
+                    <a href="${e.url}" target="blank">
+                      ${g(e.name,!0)}
+                    </a>
+                    <span>${e.date}</span>
+                  </div>
+                  ${h(e.role,!0)}
+                </div>
+              `).join("")}
+            <a class="resume" href="CV_English.docx.pdf" target="blank" style="display: none";>View My Resume👉</a>
+          </div>
+      </section>
+  `;return s({template:l})};const S=({sectionTitle:t="",items:c=[]}={})=>{const l=`
+    	<section class="projects">
+        ${p(t)}
+        <div>
+          ${c.map(e=>`
+          <div class="job">
+              <div>
+                <a href="${e.url}" target="blank">
+                  <img class="image" src="${e.img}" alt="${e.name}" />
+                </a>
+              </div>
+              <figcaption class="projec_description">
+                <a href="${e.url}" target="blank">
+                  <span> ${e.name} </span>
+                </a>
+                ${h(e.description)}
+              </figcaption>
+            </div>
+            `).join("")}
+        </div>
+    </section>
+  `;return s({template:l})};const _=(t="")=>{const c=`
+    <div class="techs">
+      <p>
+        ${t}
+      </p>
+    </div>
+  `;return s({template:c}).innerHTML};const P=`
+    <svg
+    width="24"
+    height="24"
+    stroke-width="1.5"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+      d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    </svg>
+`,V=s({template:P}).innerHTML,T=({sectionTitle:t="",items:c=[]}={})=>{const l=`
+    <section class="side_projects">
+        ${p(t)}
+        <div class="side_projects_box">
+          ${c.map(e=>`
+            <div class="side_projects_job">
+              <figcaption class="side_projects_description">
+                <a class="arrow_link" href="${e.url}" target="blank">
+                  <span> ${e.name} </span>
+                  ${V}
+                </a>
+                <p>
+                  ${e.description}
+                </p>
+                <div class="flex wrap">
+                  ${e.techs.map(o=>_(o)).join("")}
+                </div>
+              </figcaption>
+              <div class="job_img">
+                <a href="${e.url}" target="blank">
+                  <img class="image" src="${e.img}" alt="${e.name}" />
+                </a>
+              </div>
+            </div>
+          
+          `).join("")}
+
+        </div>
+      </section>
+  `;return s({template:l})},u=a({querySelector:"header"}),r=a({querySelector:"main"}),D=a({querySelector:"footer"}),E=t=>{u.appendChild($()),u.appendChild(b),r.appendChild(j({skillTitle:"skills".toUpperCase(),skills:y})),r.appendChild(H({sectionTitle:"Experience".toUpperCase(),items:L})),r.appendChild(S({sectionTitle:"Projects".toUpperCase(),items:M})),r.appendChild(T({sectionTitle:"Side Projects".toUpperCase(),items:x})),D.appendChild(v)};E();

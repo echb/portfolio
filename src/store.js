@@ -1,5 +1,4 @@
-const baseImgUrl = 'https://raw.githubusercontent.com/echb/aaa/master/docs/assets/'
-
+const baseImgUrl = 'https://raw.githubusercontent.com/echb/portfolio/master/docs/assets/'
 export const skills = [
 	{
 		name: 'Languajes',
