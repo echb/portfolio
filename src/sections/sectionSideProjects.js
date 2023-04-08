@@ -4,6 +4,7 @@ import { textLight } from "../components/text";
 import { title } from "../components/title";
 import { tech } from "../components/tech";
 import './sectionSideProjects.css'
+import { arrowComponent } from "../components/arrow";
 
 export const sideProjectsSectionComponent = ({ sectionTitle = '', items = [] } = {}) => {
   const html = /*html*/`
@@ -15,6 +16,7 @@ export const sideProjectsSectionComponent = ({ sectionTitle = '', items = [] } =
               <figcaption class="side_projects_description">
                 <a class="arrow_link" href="${e.url}" target="blank">
                   <span> ${e.name} </span>
+                  ${arrowComponent}
                 </a>
                 <p>
                   ${e.description}
