@@ -58,6 +58,13 @@ export const jobs = [
 
 export const projects = [
 	{
+		name: 'Skolable',
+		description: 'Mobile app that provides security and comfort, made with flutter.',
+		img:
+			`${baseImgUrl}skolable.png`,
+		url: 'https://skolable.com/',
+	},
+	{
 		name: 'Myfrac',
 		description: 'Mobile app that provides security and comfort, made with flutter.',
 		img:
