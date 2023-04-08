@@ -1,0 +1,41 @@
+.socialBox {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 50px;
+}
+
+.socialBox ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialBox ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link svg {
+  display: none;
+}
+
+.codeWars {
+  fill: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  .link svg {
+    display: inline-block;
+  }
+
+  .link span {
+    display: none;
+  }
+}
