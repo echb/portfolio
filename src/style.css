@@ -69,6 +69,14 @@ body[data-theme='dark'] {
   margin: 0;
 }
 
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
 header,
 section {
   padding: 100px 170px;

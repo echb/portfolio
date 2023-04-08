@@ -1,3 +1,5 @@
+const baseImgUrl = 'https://raw.githubusercontent.com/echb/aaa/master/docs/assets/'
+
 export const skills = [
 	{
 		name: 'Languajes',
@@ -37,14 +39,20 @@ export const jobs = [
 	{
 		name: 'Kiritek',
 		url: 'https://kiritek.com/',
+		date: 'Jan 2023 - Present',
+		role: 'Front End Developer',
+	},
+	{
+		name: 'Kiritek',
+		url: 'https://kiritek.com/',
 		date: 'jun 2022 - Present',
-		role: 'Mobile developer',
+		role: 'Mobile Developer',
 	},
 	{
 		name: 'G4A',
 		url: 'https://www.g4a.mx/',
 		date: 'Feb 2021 - Jun 2022',
-		role: 'Front-end developer',
+		role: 'Front End Developer',
 	},
 ]
 
@@ -53,35 +61,35 @@ export const projects = [
 		name: 'Myfrac',
 		description: 'Mobile app that provides security and comfort, made with flutter.',
 		img:
-			"public/assets/centro_urbano.png",
+			`${baseImgUrl}centro_urbano.png`,
 		url: 'https://myfrac.com/',
 	},
 	{
 		name: 'Myfrac vigilantes',
 		description: 'Mobile app alogside with myfrac provide security and allow vigilants give access to non residents, made with flutter.',
 		img:
-			"public/assets/centro_urbano.png",
+			`${baseImgUrl}centro_urbano.png`,
 		url: 'https://myfrac.com/',
 	},
 	{
 		name: 'Centro Urbano',
 		description: 'Full redesign of website, improving UI and UX, performing SEO.',
 		img:
-			"public/assets/centro_urbano.png",
+			`${baseImgUrl}centro_urbano.png`,
 		url: 'https://centrourbano.com/'
 	},
 	{
 		name: 'quadratin',
 		description: 'Creation of components',
 		img:
-			"public/assets/quadratin.png",
+			`${baseImgUrl}quadratin.png`,
 		url: 'https://www.quadratin.com.mx/'
 	},
 	{
 		name: 'Linde',
 		description: 'Creation of components',
 		img:
-			"public/assets/linde.png",
+			`${baseImgUrl}linde.png`,
 		url: 'https://www.linde.mx/'
 	}
 ]
@@ -119,7 +127,7 @@ export const sideProjects = [
 	{
 		name: 'Music Player',
 		description: 'app created on my free time to use mostly js, and web audio native api.',
-		img: "public/assets/music_make.gif",
+		img: `${baseImgUrl}music_make.gif`,
 		url: 'https://echb.github.io/music_player/',
 		techs: ['js', 'html', 'css', 'local api', 'fech', 'vs code']
 	},

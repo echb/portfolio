@@ -1,6 +1,6 @@
 import { $, $el } from "../utils";
-
-const toggleCss = /*html*/`
+import './toggle.css'
+const css = /*html*/`
   <style>
     .darkButton {
       display: inline-flex;
@@ -73,16 +73,14 @@ const toggleHtml =/*html*/`
 
 const body = $({ querySelector: 'body' })
 const component = (u) => {
-  const el = $el({
-    template: toggleHtml, style: toggleCss,
-  })
+  const el = $el({ template: toggleHtml })
   el.addEventListener('click', () => {
     const isDark = body.dataset['theme'] === 'dark'
     if (isDark) {
-      el.children[1].classList.add('active')
+      el.children[0].classList.add('active')
       body.dataset['theme'] = ''
     } else {
-      el.children[1].classList.remove('active')
+      el.children[0].classList.remove('active')
       body.dataset['theme'] = 'dark'
     }
   })

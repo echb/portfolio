@@ -2,9 +2,9 @@ import { $el } from "../utils"
 import { sectionTitleComponent } from "../components/sectionTitle";
 import { textLight } from "../components/text";
 import { title } from "../components/title";
+import './sectionSkills.css'
 
-
-const style = /*html*/`
+const css = /*html*/`
   <style>
     .skills {
       display: flex;
@@ -60,6 +60,6 @@ export const skillSetComponent = ({ skillTitle = '', skills = [] } = {}) => {
     </section>
   `;
 
-  const skillComponent = $el({ template: html, style: style })
+  const skillComponent = $el({ template: html })
   return skillComponent
 }

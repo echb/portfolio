@@ -2,7 +2,7 @@ import { $el } from "../utils"
 import { sectionTitleComponent } from "../components/sectionTitle";
 import { textLight } from "../components/text";
 import { title } from "../components/title";
-
+import './sectionProjects.css'
 const css = /*html*/`
   <style>
     .projects {
@@ -101,6 +101,6 @@ export const projectsSectionComponent = ({ sectionTitle = '', items = [] } = {})
     </section>
   `;
 
-  const skillComponent = $el({ template: html, style: css })
+  const skillComponent = $el({ template: html })
   return skillComponent
 }

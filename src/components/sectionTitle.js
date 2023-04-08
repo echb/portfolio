@@ -1,6 +1,6 @@
 import { $el } from "../utils"
-
-const style = /*html*/`
+import './sectionTitle.css'
+const css = /*html*/`
   <style>
     .section_title {
       min-width: 125px;
@@ -44,6 +44,6 @@ export const sectionTitleComponent = (text = '') => {
     <h3 class="section_title">${text}</h3>
   </div>
   `;
-  const component = $el({ template: html, style: style })
+  const component = $el({ template: html })
   return component.innerHTML
 }

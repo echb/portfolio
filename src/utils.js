@@ -4,8 +4,8 @@ export const $all = ({ querySelectorAll = '' }) => document.querySelectorAll(que
 const newDiv = document.createElement("div");
 
 /** Create a div element */
-export const $el = ({ template = '', style = '', } = {}) => {
+export const $el = ({ template = '' } = {}) => {
   const cloneDiv = newDiv.cloneNode(true);
-  cloneDiv.innerHTML = `${style} ${template}`;
+  cloneDiv.innerHTML = `${template}`;
   return cloneDiv
 }

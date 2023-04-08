@@ -1,13 +1,13 @@
 import { $el } from "../utils";
-
-const introductionStyle = /*html*/`
+import './sectionIntroduction.css'
+const css = /*html*/`
 	<style>
 		.header {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
-			height: 100vh;
-			height: 100dvh;
+			height: calc(100vh - 100px);
+			height: calc(100dvh - 100px);
 			font-weight: 400;
 		}
 		.header h1,
@@ -74,5 +74,5 @@ const introductionHtml = /*html*/`
 		</p>
 	</div>
 `;
-const component = $el({ template: introductionHtml, style: introductionStyle })
+const component = $el({ template: introductionHtml })
 export default component

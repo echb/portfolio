@@ -2,6 +2,7 @@ import { $el } from "../utils"
 import { sectionTitleComponent } from "../components/sectionTitle";
 import { textLight } from "../components/text";
 import { title } from "../components/title";
+import './sectionExperience.css'
 
 const css = /*html*/`
   <style>
@@ -82,6 +83,6 @@ export const experienceSectionComponent = ({ sectionTitle = '', items = [] } = {
       </section>
   `;
 
-  const skillComponent = $el({ template: html, style: css })
+  const skillComponent = $el({ template: html })
   return skillComponent
 }
